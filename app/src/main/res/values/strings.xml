@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sunlight</string>
+    <string name="martial_arts_quote">Martial Arts quote</string>
+    <string name="open_time_picker">open time picker</string>
+    <string name="new_quote">New</string>
+    <string name="favoriteButton">Favorite</string>
+    <string name="daily_reminder">Set Reminder</string>
+</resources>
