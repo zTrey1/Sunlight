@@ -324,13 +324,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     @Override
     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
 
-        //TODO - remove these extra textviews now that my time picker is working as expected
-        TextView hourPicked = (TextView) findViewById(R.id.tv_main_hourPickedTS);
-        TextView minutePicked = findViewById(R.id.tv_main_minutePickedTS);
-
-        hourPicked.setText("Hour: " + hourOfDay);
-        minutePicked.setText("Minute: " + minute);
-
         //ztrey testing - really naive copy/paste for setting the reminder time
         //but it works!
         Calendar calendar = Calendar.getInstance();

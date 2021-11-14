@@ -23,6 +23,9 @@
         <activity android:name=".Repeating_activity"/>
 
         <receiver android:name=".Notification_receiver"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 
