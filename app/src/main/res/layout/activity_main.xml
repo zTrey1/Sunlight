@@ -10,12 +10,17 @@
         android:id="@+id/iv_main_background_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:contentDescription="background image for the application"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.326"
+        app:srcCompat="@drawable/tatami_mats_slate_filter"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
