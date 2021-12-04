@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
       */
     //declare main variables
     ArrayList<Quote> quotes;
-    int totalQuotes;
     int currentQuoteIndex;
     Button nextQuoteButton;
     Button timePickerButton;
@@ -291,8 +290,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     @Override
     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
 
-        //ztrey testing - really naive copy/paste for setting the reminder time
-        //but it works!
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);

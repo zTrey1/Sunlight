@@ -21,32 +21,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/tatami_mats_slate_filter"
+        tools:ignore="ImageContrastCheck"
         tools:srcCompat="@drawable/tatami_mats_slate_filter" />
 
     <TextView
         android:id="@+id/tv_main_quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="sans-serif-thin"
+        android:layout_margin="16dp"
         android:text="@string/martial_arts_quote"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
 
     <Button
         android:id="@+id/bv_main_time_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="24dp"
-        android:textColor="@color/black"
-        android:text="@string/set_reminder"
+        android:layout_marginBottom="8dp"
         android:background="?android:attr/selectableItemBackground"
+        android:text="@string/set_reminder"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,10 +55,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/selectableItemBackground"
         android:text="@string/new_quote"
         android:textColor="@color/black"
-        android:background="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
