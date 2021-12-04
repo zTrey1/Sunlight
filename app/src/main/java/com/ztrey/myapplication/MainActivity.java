@@ -1,23 +1,18 @@
 package com.ztrey.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-
 import android.app.AlarmManager;
-import android.app.Dialog;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -36,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
 
       Todo eventually
        . figure if the setRepeating method is really the best way to set a recurring notification (likely testing?)
-       . add my background image
        . figure out if i'm gonna store my quotes in a SQL database
        . review the icons and text used in the notifications
        . give all of the aesthetics a look over
@@ -48,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     int currentQuoteIndex;
     Button nextQuoteButton;
     Button timePickerButton;
-    Button setReminderButton;
     Quote currentQuote;
 
     //declare view member variables
@@ -63,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         quoteTextView = findViewById(R.id.tv_main_quote);
         nextQuoteButton = findViewById(R.id.bv_main_next_quote);
         timePickerButton = findViewById(R.id.bv_main_time_picker);
-        setReminderButton = findViewById(R.id.bv_main_set_reminder);
 
         //Create quote list
         instantiateQuotes();
@@ -85,31 +77,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
                 timePicker.show(getSupportFragmentManager(), "time picker");
             }
         });
-        //TODO - ztrey - left off here - use the time picked from the time picker to set the alarm (rather than hard-coding). Use the Reminder App as guidance if helpful
-        //Button listener for setting reminder via the reminder button
-        setReminderButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Calendar calendar = Calendar.getInstance();
-
-                calendar.set(Calendar.HOUR_OF_DAY,12);
-                calendar.set(Calendar.MINUTE,0);
-                calendar.set(Calendar.SECOND,0);
-
-                Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
-                PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
-
-            }
-        });
-
-        //TODO - button listener for "favorite" button
-        /*button listener for menu (not sure how this would work)
-            1. About - i give a small message about the ap
-            2. Daily reminder - give them an option to set a daily reminder
-         */
 
         //Start up the App
         currentQuote = findQuoteOfTheDay();
