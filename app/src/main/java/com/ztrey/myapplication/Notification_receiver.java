@@ -29,9 +29,8 @@ public class Notification_receiver extends BroadcastReceiver {
         );
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context,"notify_001");
-        builder.setSmallIcon(R.drawable.ic_mma_glove); //TODO - find another icon (other than android.R.drawable.arrow_up_float)
+        builder.setSmallIcon(R.drawable.ic_mma_glove);
         builder.setAutoCancel(true);
-        //builder.setOngoing(true);
         builder.setPriority(Notification.PRIORITY_HIGH);
         builder.build().flags = Notification.FLAG_NO_CLEAR | Notification.PRIORITY_HIGH;
         builder.setContentTitle("Martial Arts Quotes");
