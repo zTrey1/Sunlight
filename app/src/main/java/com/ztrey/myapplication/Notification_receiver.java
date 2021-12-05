@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
+import androidx.annotation.DrawableRes;
 import androidx.core.app.NotificationCompat;
 
 public class Notification_receiver extends BroadcastReceiver {
@@ -28,7 +29,7 @@ public class Notification_receiver extends BroadcastReceiver {
         );
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context,"notify_001");
-        builder.setSmallIcon(android.R.drawable.arrow_up_float);
+        builder.setSmallIcon(R.drawable.ic_mma_glove); //TODO - find another icon (other than android.R.drawable.arrow_up_float)
         builder.setAutoCancel(true);
         //builder.setOngoing(true);
         builder.setPriority(Notification.PRIORITY_HIGH);
