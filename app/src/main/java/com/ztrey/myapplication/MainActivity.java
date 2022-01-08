@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
 
     /*TODO
       Next up: use the time set from the time picker to send a  notification at a given time.
-
-      That notification should either display the quote, launch the app, or otherwise not suck
       Youtube tutorial:
       https://www.youtube.com/watch?v=1fV9NmvxXJo - russian guy
       https://www.youtube.com/watch?v=L9XdV77NE_M - code i'm gonna use
@@ -30,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
       https://developer.android.com/guide/topics/ui/notifiers/notifications
 
       Todo eventually
-       . figure if the setRepeating method is really the best way to set a recurring notification (likely testing?)
-       . figure out if i'm gonna store my quotes in a SQL database
        . review the icons and text used in the notifications
        . give all of the aesthetics a look over
        .. perhaps a different app icon?
@@ -295,6 +291,14 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         calendar.set(Calendar.HOUR_OF_DAY,hourOfDay);
         calendar.set(Calendar.MINUTE,minute);
         calendar.set(Calendar.SECOND,0);
+
+        /*TODO - fix the problem where this triggers immediately if i trigger it in the past. The stackoverflow below i think has a solution.
+        Implemented solution below so that the alarm wouldn't trigger immediately if it's in the past
+        https://coderedirect.com/questions/54717/android-prevent-immediate-trigger-of-alarm-service-if-alarm-time-has-passed-for
+       */
+        if (calendar.before(Calendar.getInstance())) {
+            calendar.add(Calendar.DATE,1);
+        }
 
         Intent intent = new Intent(getApplicationContext(),Notification_receiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
