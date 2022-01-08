@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         Quote quote17 = new Quote("Formal stances are for beginners; later, one stands naturally.");
         Quote quote18 = new Quote("Perform kata exactly; actual combat is another matter.");
         Quote quote19 = new Quote("Do not forget the employment of withdrawal of power, the extension or contraction of the body, the swift of leisurely application of the technique.");
-        Quote quote20 = new Quote("Be constantly mindful, diligent, and resourceful in your purist of the Way");
+        Quote quote20 = new Quote("Be constantly mindful, diligent, and resourceful in your pursuit of the Way");
         Quote quote21 = new Quote("Deal with evil through strength. But affirm the good in man through trust. In this way we are prepared for evil, but we encourage good.");
         Quote quote22 = new Quote("Seek always peace. Wear no paths for the footsteps of others, unless the soul is endangered. We are all linked by our souls. To endanger one, endangers all.");
         Quote quote23 = new Quote("The purpose of discipline is to live more fully, not less.");
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         Quote quote45 = new Quote("Perceive those things which cannot be seen.");
         Quote quote46 = new Quote("Pay attention even to trifles.");
         Quote quote47 = new Quote("Do nothing which is of no use.");
-        Quote quote48 = new Quote("True Budo is practiced not only to destroy an enemy, it must also make him, or his own will, gladly lose his spirit to oppose you.");
+        Quote quote48 = new Quote("True budo is practiced not only to destroy an enemy, it must also make him, or his own will, gladly lose his spirit to oppose you.");
         Quote quote49 = new Quote("One must try, everyday, to expand one's limits.");
         Quote quote50 = new Quote("If you have confidence in your own words, aspirations, thoughts, and actions and do your very best, you will have no need to regret the outcome of what you do. Fear and trembling are lot of the person who, while stinting effort, hopes that everything will come out precisely as he wants.");
         Quote quote51 = new Quote("Behind each triumph are new peaks to be conquered.");
@@ -161,6 +161,33 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         Quote quote76 = new Quote("Walk a single path, becoming neither cocky with victory nor broken with defeat, without forgetting caution when all is quiet or becoming frightened when danger threatens.");
         Quote quote77 = new Quote("The teaching of one virtuous person can influence many; that which has been learned well by one generation can be passed on to a hundred.");
         Quote quote78 = new Quote("I do not know how to defeat others. All I know is the path to defeat myself. Today one must be better than yesterday, and tomorrow better than today. The pursuit of perfection is a lifelong quest that has no end.");
+        Quote quote79 = new Quote("You must learn how to wait properly");
+        Quote quote80 = new Quote("Right presence of mind means that the mind or spirit is present everywhere, because it is nowhere attached to any particular place.");
+        Quote quote81 = new Quote("The instructor’s business is not to show the way itself, but to enable the pupil to get the feel of this way to the goal by adapting it to his individual peculiarities.");
+        Quote quote82 = new Quote("A master has failed more times than a beginner has even tried");
+        Quote quote83 = new Quote("Beware the fury of a patient man");
+        Quote quote84 = new Quote("In life, when presented with any situation, breathe, take your time, focus, and then decide what to do.");
+        Quote quote85 = new Quote("The journey has to be based on passion. Put yourself in something you love to do. If you love what you do you're able to dedicate yourself and overcome obstacles.");
+        Quote quote86 = new Quote("If we fight for money, I'll stop hitting when you ask me to. If we fight for honor, I'll stop hitting you when I feel like it.");
+        Quote quote87 = new Quote("The biggest gift I received as a martial artist is, without question, the capacity to be at peace.");
+        Quote quote88 = new Quote("If you do not speak up when it matters, when would it matter that you speak? The opposite of courage is conformity. Even a dead fish can go with the flow.");
+        Quote quote89 = new Quote("Everybody has fear. The difference is that the coward does not control fear, and the brave…get over it.");
+        Quote quote90 = new Quote("A 10,000 mile walk begins with a single step and continues one step at a time.");
+        Quote quote91 = new Quote("There is nothing wrong with a life of peace and prosperity. I suggest you think about what it is you want from your life.");
+        Quote quote92 = new Quote("Failure is only the opportunity to begin again.");
+        Quote quote93 = new Quote("It is important to draw wisdom from many different places.");
+        Quote quote94 = new Quote("Hope is something you give yourself. That is the meaning of inner strength.");
+        Quote quote95 = new Quote("Life happens wherever you are, whether you make it or note.");
+        Quote quote96 = new Quote("Nothing makes me more determined to succeed than someone telling me something is impossible.");
+        Quote quote97 = new Quote("The uncomfort zone is very important for us. To feel uncomfortable is important to strengthen your spirit. Like the samurai says, if you feel comfortable you must search for the discomfort, don't look only for the easy way.");
+        Quote quote98 = new Quote("You can have talent and strength, but the most important is determination.");
+        Quote quote99 = new Quote("Every fight has taught me something.");
+        Quote quote100 = new Quote("I am a master who learns, and a student who teaches.");
+        Quote quote101 = new Quote("Chatting with a fool is a waste of words.");
+        Quote quote102 = new Quote("A good capoeirista of course likes everything of capoeira: the beats, the berimbau, the game.");
+        Quote quote103 = new Quote("A good capoeirista is humble, polite and he knows that all the other capoeiristas are brothers and human beings.");
+
+
 
 
         //Update my ArrayList (also passed from excel formula)
@@ -243,6 +270,31 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         quotes.add(quote76);
         quotes.add(quote77);
         quotes.add(quote78);
+        quotes.add(quote79);
+        quotes.add(quote80);
+        quotes.add(quote81);
+        quotes.add(quote82);
+        quotes.add(quote83);
+        quotes.add(quote84);
+        quotes.add(quote85);
+        quotes.add(quote86);
+        quotes.add(quote87);
+        quotes.add(quote88);
+        quotes.add(quote89);
+        quotes.add(quote90);
+        quotes.add(quote91);
+        quotes.add(quote92);
+        quotes.add(quote93);
+        quotes.add(quote94);
+        quotes.add(quote95);
+        quotes.add(quote96);
+        quotes.add(quote97);
+        quotes.add(quote98);
+        quotes.add(quote99);
+        quotes.add(quote100);
+        quotes.add(quote101);
+        quotes.add(quote102);
+        quotes.add(quote103);
 
     }
     Quote chooseNextQuote(){
@@ -304,7 +356,5 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
-
-
     }
 }
