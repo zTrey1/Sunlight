@@ -348,6 +348,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         Implemented solution below so that the alarm wouldn't trigger immediately if it's in the past
         https://coderedirect.com/questions/54717/android-prevent-immediate-trigger-of-alarm-service-if-alarm-time-has-passed-for
        */
+
         if (calendar.before(Calendar.getInstance())) {
             calendar.add(Calendar.DATE,1);
         }
