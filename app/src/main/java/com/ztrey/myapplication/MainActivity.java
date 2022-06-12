@@ -20,20 +20,6 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener{
 
-    /*TODO
-      Next up: use the time set from the time picker to send a  notification at a given time.
-      Youtube tutorial:
-      https://www.youtube.com/watch?v=1fV9NmvxXJo - russian guy
-      https://www.youtube.com/watch?v=L9XdV77NE_M - code i'm gonna use
-        stored gitlab code in ReminderApp
-      Android documentation here:
-      https://developer.android.com/guide/topics/ui/notifiers/notifications
-
-      Todo eventually
-       . review the icons and text used in the notifications
-       . give all of the aesthetics a look over
-       .. perhaps a different app icon?
-      */
     //declare main variables
     ArrayList<Quote> quotes;
     int currentQuoteIndex;
@@ -325,8 +311,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     int generateQuoteOfTheDayIndex(int todayInInt){
         int quoteOfTheDayIndex;
 
-        //naive implementation of a hash to allow basic functionality
-        //TODO - improve the hash so that it doesn't repeat in sequence
+        //naive implementation of a hash to allow basic randomizing functionality
         quoteOfTheDayIndex = (todayInInt % quotes.size()); //get size
 
         return quoteOfTheDayIndex;
@@ -341,11 +326,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         calendar.set(Calendar.MINUTE,minute);
         calendar.set(Calendar.SECOND,0);
 
-        /*TODO - fix the problem where this triggers immediately if i trigger it in the past. The stackoverflow below i think has a solution.
-        Implemented solution below so that the alarm wouldn't trigger immediately if it's in the past
-        https://coderedirect.com/questions/54717/android-prevent-immediate-trigger-of-alarm-service-if-alarm-time-has-passed-for
-       */
-
+        // The the time selected is before today's current time, don't immediately trigger a notification (this is needed due to some quirky behavior from the API)
         if (calendar.before(Calendar.getInstance())) {
             calendar.add(Calendar.DATE,1);
         }
