@@ -19,9 +19,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/tatami_mats_slate_filter"
+        app:srcCompat="@drawable/background_image_tatami"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@drawable/tatami_mats_slate_filter" />
+        tools:srcCompat="@drawable/background_image_tatami" />
 
     <TextView
         android:id="@+id/tv_main_quote"
